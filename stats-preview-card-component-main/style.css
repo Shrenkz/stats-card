@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color :hsl(233, 47%, 7%);
+  font-size: 15px;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-content{
+  background-color: hsl(244, 38%, 16%);
+  width: 1000px;
+  height: 440px;
+  display: flex;
+  border-radius: 8px;
+}
+
+.left-content{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2rem;
+  margin: 2.5rem;
+}
+
+.left-content h1{
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.left-content h1 span{
+  color: hsl(277, 64%, 61%);
+}
+
+.left-content p{
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  max-width: 21rem;
+  font-size: 18px;
+}
+
+.statbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 310px;
+  margin-top: 3rem;
+}
+
+.stat{
+  width: 50px;
+  font-size: 15px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 1.5;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.stat span{
+  text-transform: none;
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-content{
+  display: flex;
+  width: 50%;
+  height: 440px;
+  background-size: cover;
+  background-image: url('./images/image-header-desktop.jpg');
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 64%, 61%);
+  opacity: 0.5;
+}
+
+@media screen and (max-width:1000px){
+  .main-content{
+    height: auto;
+  }
+
+  .left-content{
+    height: auto;
+  }
+
+  .right-content{
+    height: auto;
+  }
+}
+
+@media screen and (max-width:800px){
+
+  main{
+    height: auto;
+  }
+
+  .main-content{
+    flex-wrap: wrap-reverse;
+    margin: 2rem;
+    width: 100%;
+  }
+  
+  .left-content{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    padding: 0;
+  }
+
+
+  .right-content{
+    width: 100%;
+    height: 320px;
+    background-image: url('./images/image-header-mobile.jpg');
+    background-size: cover;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .image{
+    border-radius: 8px 8px 0 0;
+  }
+
+  .statbox{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .stat{
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 17px;
+  }
+
+  .stat span{
+    font-size: 30px;
+    align-items: center;
+  }
+
+}
